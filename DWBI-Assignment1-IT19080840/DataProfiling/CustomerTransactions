@@ -1,0 +1,1129 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{1E09BCB7-10E5-4A21-86B4-67307F50C406}" Name="Brand">
+      <DtsConnectionManagerID>Brand</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{3810FFB1-8217-4F8F-AAE7-8BCEB3A3DC49}" Name="Campaign">
+      <DtsConnectionManagerID>Campaign</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{242C50E8-2A90-48E8-82CB-C33EBE31EA15}" Name="Category">
+      <DtsConnectionManagerID>Category</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{13465A49-59B8-47CE-A93E-47353BEFE774}" Name="CouponRedemption">
+      <DtsConnectionManagerID>CouponRedemption</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{CA05AD6D-97F3-4397-A358-8FC146DAF977}" Name="CustomerAddress">
+      <DtsConnectionManagerID>CustomerAddress</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{9DD0F3FF-EE40-49D5-B03C-38B1FF12DC83}" Name="CustomerInfo">
+      <DtsConnectionManagerID>CustomerInfo</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{E6D921BA-3AAB-45E9-8EF3-DB06E5BEA4A7}" Name="CustomerTransactions">
+      <DtsConnectionManagerID>CustomerTransactions</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{73B728F5-2A05-4B0B-ABD0-B79899741A2E}" Name="CustomerTransactions 1">
+      <DtsConnectionManagerID>CustomerTransactions 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{5521EB06-09F3-4184-B01C-42335F653962}" Name="DESKTOP-SISKTIM.Coupon_Staging">
+      <DtsConnectionManagerID>DESKTOP-SISKTIM.Coupon_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{18CB6374-9518-48B7-8273-FE7D4A19DFC4}" Name="Items">
+      <DtsConnectionManagerID>Items</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ItemTransaction" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ItemTransaction" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ItemTransaction" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ItemTransaction" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ItemTransaction" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ItemTransaction" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ItemTransaction" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="TransactionID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Transaction_Date" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Customer_ID" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Item_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Coupon_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="quantity" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="selling_price" SqlDbType="Money" MaxLength="0" Precision="19" Scale="4" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="other_discount" SqlDbType="Money" MaxLength="0" Precision="19" Scale="4" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="coupon_discount" SqlDbType="Money" MaxLength="0" Precision="19" Scale="4" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Transaction_Date" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2012-01-10T00:00:00.0000000</MinValue>
+        <MaxValue>2021-05-08T00:00:00.0000000</MaxValue>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="quantity" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>10</MaxValue>
+        <Mean>1.26525</Mean>
+        <StdDev>0.781062804239625</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="selling_price" SqlDbType="Money" MaxLength="0" Precision="19" Scale="4" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>8.9000</MinValue>
+        <MaxValue>4593.9100</MaxValue>
+        <Mean>101.74576</Mean>
+        <StdDev>130.492869590982</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="other_discount" SqlDbType="Money" MaxLength="0" Precision="19" Scale="4" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-498.6800</MinValue>
+        <MaxValue>0.0000</MaxValue>
+        <Mean>-18.7584566666664</Mean>
+        <StdDev>31.7604918599317</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="coupon_discount" SqlDbType="Money" MaxLength="0" Precision="19" Scale="4" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-102.9400</MinValue>
+        <MaxValue>0.0000</MaxValue>
+        <Mean>-5.07354083333326</Mean>
+        <StdDev>14.7791192087857</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="TransactionID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>6</MinLength>
+        <MaxLength>7</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>9999</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>2001</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Customer_ID" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>4</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>10</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>11990</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Item_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>6</MinLength>
+        <MaxLength>6</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>12000</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Coupon_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>6</MinLength>
+        <MaxLength>7</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>4948</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>7052</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <KeyColumns>
+          <Column Name="TransactionID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="TransactionID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>12000</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Transaction_Date" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>41</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2012-05-24T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-04-05T00:00:00.0000000</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-06-27T00:00:00.0000000</Value>
+            <Count>316</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-05-07T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-07-01T00:00:00.0000000</Value>
+            <Count>280</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-06-02T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-04-26T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-05-28T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-06-06T00:00:00.0000000</Value>
+            <Count>54</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-06-14T00:00:00.0000000</Value>
+            <Count>113</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-06-17T00:00:00.0000000</Value>
+            <Count>50</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-06-23T00:00:00.0000000</Value>
+            <Count>175</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-07-11T00:00:00.0000000</Value>
+            <Count>503</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-05-03T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-07-05T00:00:00.0000000</Value>
+            <Count>490</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-08T00:00:00.0000000</Value>
+            <Count>9636</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-03-30T00:00:00.0000000</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-04-19T00:00:00.0000000</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Customer_ID" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1000</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>C260</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C719</Value>
+            <Count>38</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C332</Value>
+            <Count>103</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C886</Value>
+            <Count>188</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C340</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C233</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C310</Value>
+            <Count>65</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C999</Value>
+            <Count>270</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C651</Value>
+            <Count>37</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C135</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C293</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C171</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C279</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C195</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C439</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C337</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C935</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C203</Value>
+            <Count>36</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C787</Value>
+            <Count>36</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C994</Value>
+            <Count>258</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C192</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C091</Value>
+            <Count>38</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C368</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C387</Value>
+            <Count>53</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C063</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C547</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C052</Value>
+            <Count>66</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C001</Value>
+            <Count>316</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C008</Value>
+            <Count>628</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C164</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C679</Value>
+            <Count>54</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C344</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C846</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C401</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C002</Value>
+            <Count>515</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C301</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C378</Value>
+            <Count>49</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C362</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C464</Value>
+            <Count>147</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C534</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C079</Value>
+            <Count>52</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C420</Value>
+            <Count>38</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C188</Value>
+            <Count>87</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C444</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C895</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C435</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C992</Value>
+            <Count>278</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C189</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C007</Value>
+            <Count>231</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C857</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C138</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C457</Value>
+            <Count>52</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C979</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C975</Value>
+            <Count>39</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C816</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C463</Value>
+            <Count>42</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C751</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C005</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C140</Value>
+            <Count>87</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C014</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C590</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C086</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C588</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C245</Value>
+            <Count>49</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C697</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C430</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C639</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C048</Value>
+            <Count>58</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C018</Value>
+            <Count>409</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C814</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C833</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C231</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C234</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C993</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C072</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C468</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C026</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C269</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C212</Value>
+            <Count>48</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C560</Value>
+            <Count>152</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C395</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C467</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C713</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C009</Value>
+            <Count>38</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C998</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Item_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4000</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>IT1780</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0321</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1760</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0581</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0400</Value>
+            <Count>51</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0050</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0320</Value>
+            <Count>33</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0666</Value>
+            <Count>43</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0561</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0888</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0090</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1417</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1098</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1124</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0555</Value>
+            <Count>35</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1106</Value>
+            <Count>49</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1534</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0098</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0109</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1025</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1367</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0444</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0199</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0087</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1000</Value>
+            <Count>68</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1996</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0409</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0414</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0024</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1940</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0007</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0046</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1123</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0035</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0534</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0040</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0002</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0744</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0943</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0101</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1017</Value>
+            <Count>39</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0089</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0900</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0560</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1240</Value>
+            <Count>39</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0387</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0195</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1700</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1687</Value>
+            <Count>192</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0381</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0209</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0030</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1785</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0410</Value>
+            <Count>43</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0088</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0700</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1190</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0345</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0789</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1009</Value>
+            <Count>50</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1249</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0930</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0499</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1015</Value>
+            <Count>181</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0991</Value>
+            <Count>55</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT1380</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0800</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IT0073</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <KeyColumns>
+          <Column Name="Coupon_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Coupon_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>12000</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="TransactionID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>TR\d\d\d\d</RegexText>
+            <Frequency>84</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>TR\d\d\d\d\d</RegexText>
+            <Frequency>16</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Customer_ID" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>C\d\d\d</RegexText>
+            <Frequency>100</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Item_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>IT\d\d\d\d</RegexText>
+            <Frequency>100</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <Column Name="Coupon_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>CU\d+</RegexText>
+            <Frequency>100</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <DeterminantColumns>
+          <Column Name="TransactionID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Coupon_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <DeterminantColumns>
+          <Column Name="Coupon_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Item_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <DeterminantColumns>
+          <Column Name="TransactionID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Item_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <DeterminantColumns>
+          <Column Name="Coupon_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Customer_ID" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <DeterminantColumns>
+          <Column Name="TransactionID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Customer_ID" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <DeterminantColumns>
+          <Column Name="Coupon_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Transaction_Date" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <DeterminantColumns>
+          <Column Name="TransactionID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Transaction_Date" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ItemTransaction" RowCount="12000" />
+        <DeterminantColumns>
+          <Column Name="Coupon_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="TransactionID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

@@ -1,0 +1,354 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{1E09BCB7-10E5-4A21-86B4-67307F50C406}" Name="Brand">
+      <DtsConnectionManagerID>Brand</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{3810FFB1-8217-4F8F-AAE7-8BCEB3A3DC49}" Name="Campaign">
+      <DtsConnectionManagerID>Campaign</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{242C50E8-2A90-48E8-82CB-C33EBE31EA15}" Name="Category">
+      <DtsConnectionManagerID>Category</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{13465A49-59B8-47CE-A93E-47353BEFE774}" Name="CouponRedemption">
+      <DtsConnectionManagerID>CouponRedemption</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{CA05AD6D-97F3-4397-A358-8FC146DAF977}" Name="CustomerAddress">
+      <DtsConnectionManagerID>CustomerAddress</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{9DD0F3FF-EE40-49D5-B03C-38B1FF12DC83}" Name="CustomerInfo">
+      <DtsConnectionManagerID>CustomerInfo</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{E6D921BA-3AAB-45E9-8EF3-DB06E5BEA4A7}" Name="CustomerTransactions">
+      <DtsConnectionManagerID>CustomerTransactions</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{73B728F5-2A05-4B0B-ABD0-B79899741A2E}" Name="CustomerTransactions 1">
+      <DtsConnectionManagerID>CustomerTransactions 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{5521EB06-09F3-4184-B01C-42335F653962}" Name="DESKTOP-SISKTIM.Coupon_Staging">
+      <DtsConnectionManagerID>DESKTOP-SISKTIM.Coupon_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{18CB6374-9518-48B7-8273-FE7D4A19DFC4}" Name="Items">
+      <DtsConnectionManagerID>Items</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ProductBrand" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ProductBrand" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ProductBrand" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ProductBrand" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ProductBrand" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ProductBrand" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ProductBrand" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="Brand_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="Brand_type" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="CategoryID" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="modifiedDate" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>1211</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="modifiedDate" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2012-04-13T00:00:00.0000000</MinValue>
+        <MaxValue>2013-09-17T00:00:00.0000000</MaxValue>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="Brand_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>6</MinLength>
+        <MaxLength>6</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>4499</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="Brand_type" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>5</MinLength>
+        <MaxLength>11</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>2091</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>2408</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="CategoryID" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>7</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>4497</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <KeyColumns>
+          <Column Name="Brand_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="Brand_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4499</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="Brand_type" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Established</Value>
+            <Count>2408</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Local</Value>
+            <Count>2091</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="CategoryID" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>12</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>CAT0002</Value>
+            <Count>525</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0007</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0006</Value>
+            <Count>1008</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0005</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0004</Value>
+            <Count>108</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0003</Value>
+            <Count>1148</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0010</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0001</Value>
+            <Count>1646</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0009</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="modifiedDate" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>5</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2013-09-17T00:00:00.0000000</Value>
+            <Count>554</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2013-07-11T00:00:00.0000000</Value>
+            <Count>1315</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-06-11T00:00:00.0000000</Value>
+            <Count>1032</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2013-04-17T00:00:00.0000000</Value>
+            <Count>314</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-04-13T00:00:00.0000000</Value>
+            <Count>73</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="Brand_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>BT\d\d\d\d</RegexText>
+            <Frequency>100</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="Brand_type" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>ESTABLISHED</RegexText>
+            <Frequency>54</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>LOCAL</RegexText>
+            <Frequency>46</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="CategoryID" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>CAT000\d</RegexText>
+            <Frequency>100</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <DeterminantColumns>
+          <Column Name="Brand_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="modifiedDate" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <DeterminantColumns>
+          <Column Name="Brand_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="CategoryID" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5521EB06-09F3-4184-B01C-42335F653962}</DataSourceID>
+        <Table DataSource="DESKTOP-SISKTIM" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <DeterminantColumns>
+          <Column Name="Brand_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="Brand_type" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

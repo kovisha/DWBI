@@ -1,0 +1,12 @@
+Category_Name,CategoryID
+Grocery,CAT0001
+Bakery,CAT0002
+Pharmaceutical,CAT0003
+Packaged Meat,CAT0004
+Seafood,CAT0005
+Natural Products,CAT0006
+Prepared Food,CAT0007
+Skin & Hair Care,CAT0008
+Dairy juices & Snacks,CAT0009
+Meat,CAT0010
+Miscellaneous,CAT0011
