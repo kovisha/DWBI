@@ -1,0 +1,311 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="77e18711-9dd4-492f-b154-e6b78caa1f0c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Coupon Redem</ID>
+  <Name>Dim Coupon Redem</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="4" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1276" scrolltop="-956" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7011" y="12753" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimCampaign" left="20" top="6395" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3969" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000810f00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimCampaign" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimCoupon_Redem" left="205" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3598" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00000e0e00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimCoupon_Redem" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1605" top="3695" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[DimCoupon_Redem-DimCampaign]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="6" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2004" y="6395" />
+              <point x="2004" y="3995" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1276</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-956</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="c1c53ef8-6372-4656-b9ae-a49cd5cdde3f">
+    <DataSourceViewID>DSV_Coupon_DW</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="edd82de5-9486-490f-a60d-79317d738c37">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="790d2419-142e-47e6-a657-3b802b3b5a2a">
+      <ID>Coupon SK</ID>
+      <Name>Coupon SK</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f81742a5-64e7-41fd-9be6-5db9b67cb294">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="99ff1ab2-72da-4944-abef-e88735ea7e6e">
+            <TableID>dbo_DimCoupon_Redem</TableID>
+            <ColumnID>CouponSK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="9aa4ee91-d191-4ecf-b492-6c6a1ff27dfe">
+          <AttributeID>Campaign SK</AttributeID>
+          <Name>Campaign SK</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1dc8365b-80e2-4c0a-af32-d5e10854589b">
+          <AttributeID>Coupon Alternate ID</AttributeID>
+          <Name>Coupon Alternate ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="414bae70-1210-4b9c-a2a7-6a165bc66734">
+          <AttributeID>Coupon Type</AttributeID>
+          <Name>Coupon Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7cdf3d85-ed54-4efe-85eb-db2e1897448a">
+          <AttributeID>Redemption Status</AttributeID>
+          <Name>Redemption Status</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5434e090-2fc2-4aa7-90e2-2619a70b33c3">
+          <AttributeID>Campaign ID Key</AttributeID>
+          <Name>Campaign ID Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="350357a7-cfed-458d-b003-4daff93be9cd">
+          <AttributeID>Campaign Alternate ID</AttributeID>
+          <Name>Campaign Alternate ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c71c6246-b590-436f-9558-fee3074cd932">
+          <AttributeID>Campaign Type</AttributeID>
+          <Name>Campaign Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="241987cd-ed13-4379-af2a-48cc52eff98e">
+          <AttributeID>Camapaign Start Date</AttributeID>
+          <Name>Camapaign Start Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="52c43516-b5dd-45a2-bf51-1d0b52ac032b">
+          <AttributeID>Camapaign End Date</AttributeID>
+          <Name>Camapaign End Date</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="809966f0-f0f6-4c01-a820-3459245f82e0">
+      <ID>Campaign SK</ID>
+      <Name>Campaign SK</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d49837d4-659e-47bc-bf5d-2aa0e2a6ab5e">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="72ac462f-104b-47d3-9786-ba48498eead9">
+            <TableID>dbo_DimCampaign</TableID>
+            <ColumnID>CampaignSK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cef56f59-e66b-4b88-a963-2a75903886f4">
+      <ID>Coupon Alternate ID</ID>
+      <Name>Coupon Alternate ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="be1d4b94-702f-44dd-b3f6-70fcfa752188">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bcf8bc1b-0917-4703-b027-cac0ebe9322c">
+            <TableID>dbo_DimCoupon_Redem</TableID>
+            <ColumnID>CouponAlternateID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="79b88001-ce8f-40b1-b802-75e82bd1a6d1">
+      <ID>Coupon Type</ID>
+      <Name>Coupon Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6e643cbb-53aa-436a-91c0-3bb4f0bab922">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5b60313a-5422-4ab1-8e69-2047fbbf4d62">
+            <TableID>dbo_DimCoupon_Redem</TableID>
+            <ColumnID>CouponType</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ebb4d216-a59a-4a2c-ad3a-0479cad938c4">
+      <ID>Redemption Status</ID>
+      <Name>Redemption Status</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d2d20b04-e18b-442c-9720-390d69ef391e">
+          <DataType>WChar</DataType>
+          <DataSize>5</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8e3a51d0-0bdf-45b0-97bd-ec5de09e3c94">
+            <TableID>dbo_DimCoupon_Redem</TableID>
+            <ColumnID>RedemptionStatus</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9a4f0eb0-3e60-48ad-bd48-b83f6b4059b3">
+      <ID>Campaign ID Key</ID>
+      <Name>Campaign ID Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="915133a3-5821-4325-987a-c43900913e84">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="820918e4-6a1a-4601-b720-72a12aa45d7e">
+            <TableID>dbo_DimCoupon_Redem</TableID>
+            <ColumnID>CampaignIDKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="80eb363d-2500-438c-8577-83456304e121">
+      <ID>Campaign Alternate ID</ID>
+      <Name>Campaign Alternate ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="11852bf8-4241-4909-843a-c6c1b1758fa1">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="06dd0e0a-b71a-4031-8293-b3e597544f99">
+            <TableID>dbo_DimCampaign</TableID>
+            <ColumnID>CampaignAlternateID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e8be41b1-c85b-4a28-befc-6b8c896e24e0">
+      <ID>Campaign Type</ID>
+      <Name>Campaign Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d1090f7b-3fd6-411a-a8a0-e62ed3d26838">
+          <DataType>WChar</DataType>
+          <DataSize>5</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7b32b935-f470-455b-8bb3-ead7b596bb44">
+            <TableID>dbo_DimCampaign</TableID>
+            <ColumnID>CampaignType</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="78ecc330-d958-4409-8946-ccec0c4d2012">
+      <ID>Camapaign Start Date</ID>
+      <Name>Camapaign Start Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d4c5d830-9dcb-45ec-b62b-489e22b7a93b">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="75fb3096-9414-4665-b551-7a5ec0c2b8a2">
+            <TableID>dbo_DimCampaign</TableID>
+            <ColumnID>Camapaign_StartDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ae65d950-9309-4d49-9d0e-f25f92e78c44">
+      <ID>Camapaign End Date</ID>
+      <Name>Camapaign End Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="60fc3f7f-d7ca-4fac-9674-f9b97ff40cc3">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="308d348a-6140-496b-9947-ee5018d7efc9">
+            <TableID>dbo_DimCampaign</TableID>
+            <ColumnID>Camapaign_EndDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
